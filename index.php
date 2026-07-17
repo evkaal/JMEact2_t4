@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>CRUD Lavandería MVC</title>
-    <!-- Bootstrap para replicar el diseño del video -->
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <h1 class="text-center p-3">Gestión de Recepciones</h1>
     
     <div class="container-fluid row">
-        <!-- Formulario (Lado Izquierdo) -->
+        <!-- Formulario -->
         <form class="col-4 p-3" method="POST">
             <h3 class="text-center text-secondary bg-light p-2 rounded">Registro de prendas</h3>
             
             <?php
-            // Incluimos la conexión y los controladores
+            //  conexión y los controladores
             include "models/conexion.php";
             include "controller/registro.php";
             include "controller/eliminar.php";
