@@ -15,6 +15,10 @@
             <h3 class="text-center text-secondary bg-light p-2 rounded">Registro de prendas</h3>
             
             <?php
+
+            ini_set('display_errors', 1);
+            ini_set('display_startup_errors', 1);
+            error_reporting(E_ALL);
             //  conexión y los controladores
             include "models/conexion.php";
             include "controller/registro.php";
