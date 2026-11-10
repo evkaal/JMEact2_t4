@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Productos</title>
+</head>
+<body>
+    <h1 th:text="${titulo}">Título por defecto</h1>
+    <p>Autor: <span th:text="${autor}">Nombre</span></p>
+    
+    <hr>
+    <h3>Filtrar por Categoría:</h3>
+    <a href="/productos">Todos</a> | 
+    <a href="/productos?categoria=Computo">Cómputo</a> | 
+    <a href="/productos?categoria=Accesorios">Accesorios</a>
+
+    <br><br>
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Categoría</th>
+            <th>Acción</th>
+        </tr>
+        <tr th:each="p : ${productos}">
+            <td th:text="${p.nombre}">Nombre</td>
+            <td th:text="${p.precio}">0.0</td>
+            <td th:text="${p.categoria}">Cat</td>
+            <td><a th:href="@{'/producto/detalle/' + ${p.nombre}}">Ver detalle</a></td>
+        </tr>
+    </table>
+    <br>
+    <a href="/producto/nuevo">Registrar nuevo producto (Formulario)</a>
+</body>
+</html>

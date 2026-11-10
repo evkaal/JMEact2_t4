@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Resultado</title></head>
+<body>
+    <h1>¡Producto Registrado con Éxito!</h1>
+    <p><strong>Nombre:</strong> <span th:text="${producto.nombre}"></span></p>
+    <p><strong>Precio:</strong> <span th:text="${producto.precio}"></span></p>
+    <p><strong>Categoría:</strong> <span th:text="${producto.categoria}"></span></p>
+    <br>
+    <a href="/productos">Ver listado completo</a>
+</body>
+</html>

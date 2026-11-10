@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Nuevo Producto</title>
+</head>
+<body>
+    <h1>Registro de Producto con @ModelAttribute</h1>
+    <p>Desarrollado por: <span th:text="${autor}"></span></p>
+
+    <form action="#" th:action="@{/producto/nuevo}" th:object="${productoForm}" method="post">
+        <label>Nombre:</label>
+        <input type="text" th:field="*{nombre}" /><br><br>
+
+        <label>Precio:</label>
+        <input type="number" step="0.01" th:field="*{precio}" /><br><br>
+
+        <label>Categoría:</label>
+        <input type="text" th:field="*{categoria}" /><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+    <br>
+    <a href="/productos">Regresar al listado</a>
+</body>
+</html>
